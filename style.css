@@ -6,4 +6,30 @@
           box-sizing: border-box;
   font-family: 微軟正黑體;
 }
+
+#dessert-slider {
+  height: 100vh;
+}
+
+#dessert-slider .dessert {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#dessert-slider .dessert img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#dessert-slider .dessert h1 {
+  position: absolute;
+  color: tomato;
+  top: 150px;
+  left: 150px;
+  z-index: 2;
+}
 /*# sourceMappingURL=style.css.map */
