@@ -46,6 +46,26 @@
     .d-active {
         display: block;
     }
+    #prev,#forward{
+        width: 80px;
+        height: 150px;
+        background: #dbdbdb66;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #prev{
+        left:0
+    }
+
+    #forward{
+        right: 0;
+    }
+
+
+
 }
 
 // 動畫 animation 必須先額外設定動畫的效果

@@ -52,6 +52,25 @@
   display: block;
 }
 
+#dessert-slider #prev, #dessert-slider #forward {
+  width: 80px;
+  height: 150px;
+  background: #dbdbdb66;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#dessert-slider #prev {
+  left: 0;
+}
+
+#dessert-slider #forward {
+  right: 0;
+}
+
 @-webkit-keyframes DImage {
   0% {
     -webkit-transform: scale(1.5);
