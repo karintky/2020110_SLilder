@@ -71,6 +71,24 @@
   right: 0;
 }
 
+#dessert-slider #btns {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50px;
+  left: 50%;
+}
+
+#dessert-slider #btns .btn {
+  display: inline-block;
+  background: #ffffff50;
+  margin: 0 10px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
 @-webkit-keyframes DImage {
   0% {
     -webkit-transform: scale(1.5);
