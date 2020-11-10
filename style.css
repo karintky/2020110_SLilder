@@ -52,7 +52,7 @@
   display: block;
 }
 
-#dessert-slider #prev, #dessert-slider #forward {
+#dessert-slider #prev, #dessert-slider #next {
   width: 80px;
   height: 150px;
   background: #dbdbdb66;
@@ -67,7 +67,7 @@
   left: 0;
 }
 
-#dessert-slider #forward {
+#dessert-slider #next {
   right: 0;
 }
 
