@@ -15,26 +15,29 @@ function btnNext() {
 
     showItem();
     reset();
+    switchButton();
 }
 
 
 function btnPrev() {
     index--;
 
-    if (index == -1) index = items.length -1;
-    
+    if (index == -1) index = items.length - 1;
+
     console.log(index);
 
     showItem();
     reset();
 
+    // 必須加SWITCHBUTTON，不然會錯亂
+    switchButton();
 }
 
 next.onclick = btnNext;
 prev.onclick = btnPrev;
 
 function showItem() {
-    for(var i = 0; i < items.length; i++) {     
+    for (var i = 0; i < items.length; i++) {
         items[i].classList.remove("d-active");
     }
 
@@ -44,11 +47,29 @@ function showItem() {
 var duration = document.getElementById("dessert-slider").getAttribute("data-slider-duration");
 
 var auto = setInterval(btnNext, duration);
-function reset() {
-clearInterval(auto);
-auto = setInterval(btnNext, duration);
 
+function reset() {
+    clearInterval(auto);
+    auto = setInterval(btnNext, duration);
 }
 
+var btns = document.getElementsByClassName("btn");
 
+for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function () {
+        index = this.getAttribute("data-slider-item") - 1;
+
+        showItem();
+        reset();
+        switchButton();
+    }
+}
+
+function switchButton() {
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("btn-active");
+    }
+
+    btns[index].classList.add("btn-active");
+}
 
